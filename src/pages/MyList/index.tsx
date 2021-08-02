@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import { MyListPageProps } from './types'
 
-const MyList: FC<MyListPageProps> = (): JSX.Element => {
+const MyList: FC<MyListPageProps> = () => {
   return <h1>MyList</h1>
 }
 
