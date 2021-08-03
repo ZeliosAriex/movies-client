@@ -4,6 +4,8 @@ import App from './App'
 
 test('renders learn react link', async () => {
   render(<App />)
-  const linkElement = await screen.findByText(/Search/i)
-  expect(linkElement).toBeInTheDocument()
+  const pageTitle = await screen.findByText(
+    /Búsqueda de películas/i
+  )
+  expect(pageTitle).toBeInTheDocument()
 })

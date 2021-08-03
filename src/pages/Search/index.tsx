@@ -2,19 +2,17 @@ import React, { FC } from 'react'
 import { SearchPageProps } from './types'
 import {
   ContentFrame,
+  PageTitle,
   SimpleLayout,
   Space,
 } from '../../components'
-import { Typography } from 'antd'
-
-const { Title } = Typography
 
 const Search: FC<SearchPageProps> = () => {
   return (
     <SimpleLayout>
       <ContentFrame>
         <Space amount='1.6rem' orientation='vertical' />
-        <Title>Movie Search</Title>
+        <PageTitle>Búsqueda de películas</PageTitle>
       </ContentFrame>
     </SimpleLayout>
   )

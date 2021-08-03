@@ -1,6 +1,7 @@
 import React, { lazy, Suspense } from 'react'
 import { Redirect, Router } from '@reach/router'
 import { Spin } from 'antd'
+import { ProtectedRoute } from './components/ProtectedRoute'
 
 // Lazy load pages
 const SearchPage = lazy(() => import('../pages/Search'))
@@ -11,7 +12,10 @@ export const Routes = (): JSX.Element => {
     <Suspense fallback={<Spin size='large' />}>
       <Router>
         <Redirect from='/' to='/search' noThrow />
-        <SearchPage path='/search' />
+        <ProtectedRoute
+          component={SearchPage}
+          path='/search'
+        />
         <MyListPage path='/mylist' />
       </Router>
     </Suspense>

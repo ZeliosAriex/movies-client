@@ -6,7 +6,7 @@ import {
 import { Dispatch } from 'react'
 
 export interface AuthContextProps {
-  state: AuthState | undefined
+  state: AuthState
   dispatch: Dispatch<AuthAction>
   actions: AuthActionSetter
 }

@@ -27,16 +27,15 @@ export const GlobalContextProvider: FC = ({ children }) => {
     authInitialState
   )
 
-  const contextValue: GlobalStateContextProps = {
-    auth: {
-      state: authState,
-      dispatch: authDispatch,
-      actions: authActions,
-    },
-  }
-
   return (
-    <GlobalStateContext.Provider value={contextValue}>
+    <GlobalStateContext.Provider
+      value={{
+        auth: {
+          state: authState,
+          dispatch: authDispatch,
+          actions: authActions,
+        },
+      }}>
       {children}
     </GlobalStateContext.Provider>
   )

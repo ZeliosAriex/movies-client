@@ -1,12 +1,14 @@
 import { Session } from './types'
 import { AuthAction } from './actions'
+import { sessionMock } from './mocks'
 
 export interface AuthState {
   session: Session | undefined
 }
 
+// TODO: Remove mock!
 export const authInitialState: AuthState = {
-  session: undefined,
+  session: sessionMock,
 }
 
 export const authStateReducer = (
