@@ -1,4 +1,16 @@
-export const MQ_BREAKPOINTS = [576, 768, 992, 1200]
+import {
+  LG_BREAKPOINT,
+  MD_BREAKPOINT,
+  SM_BREAKPOINT,
+  XL_BREAKPOINT,
+} from '../constants'
+
+export const MQ_BREAKPOINTS = [
+  SM_BREAKPOINT,
+  MD_BREAKPOINT,
+  LG_BREAKPOINT,
+  XL_BREAKPOINT,
+]
 export const MQ_BREAKPOINT_NAMES = [
   'sm',
   'md',

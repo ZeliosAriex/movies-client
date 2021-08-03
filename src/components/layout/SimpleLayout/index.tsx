@@ -4,7 +4,7 @@ import { StyledAntLayout } from './styled'
 
 const { Header, Content } = AntLayout
 
-export const Layout: FC = ({ children }) => (
+export const SimpleLayout: FC = ({ children }) => (
   <StyledAntLayout>
     <Header />
     <Content>{children}</Content>

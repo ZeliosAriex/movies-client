@@ -1,10 +1,15 @@
 import React from 'react'
 import { Routes } from './routes'
-import { GlobalContextProvider } from './contexts'
+import {
+  GlobalContextProvider,
+  ThemeContextProvider,
+} from './contexts'
 
 const App = (): JSX.Element => (
   <GlobalContextProvider>
-    <Routes />
+    <ThemeContextProvider>
+      <Routes />
+    </ThemeContextProvider>
   </GlobalContextProvider>
 )
 
