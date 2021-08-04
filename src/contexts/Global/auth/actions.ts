@@ -14,11 +14,11 @@ const guestLoginSuccess = (
   payload,
 })
 
-export type AuthActionSetter = {
-  guestLoginSuccess: (payload: Session) => AuthAction
+export type AuthActions = {
+  guestLoginSuccess: typeof guestLoginSuccess
 }
 
 // Export action setters
-export const actions: AuthActionSetter = {
+export const actions: AuthActions = {
   guestLoginSuccess,
 }

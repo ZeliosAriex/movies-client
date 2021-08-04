@@ -1,13 +1,12 @@
 import styled from '@emotion/styled'
 import { Typography } from 'antd'
-import { mq } from '../../../utils'
 
 const { Title } = Typography
 
-export const PageTitle = styled(Title)`
+export const PageTitle = styled(Title)<{ color?: string }>`
   text-align: center;
 
-  ${mq.md} {
-    text-align: left;
-  }
+  // AntD Overrides
+  color: ${({ color }) => color ?? '#000'} !important;
+  margin-bottom: 0 !important; // Dont use margins, use spacer components
 `

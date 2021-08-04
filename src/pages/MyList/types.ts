@@ -1,4 +1,3 @@
-import { RouteComponentProps } from '@reach/router'
+import { PageProps } from '../types'
 
-export interface MyListPageProps
-  extends RouteComponentProps {}
+export interface MyListPageProps extends PageProps {}

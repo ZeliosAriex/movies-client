@@ -1,4 +1,5 @@
 export * from './ContentFrame'
 export * from './Header'
+export * from './Hero'
 export * from './SimpleLayout'
 export * from './Space'

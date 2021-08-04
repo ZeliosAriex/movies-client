@@ -1,4 +1,3 @@
-import { RouteComponentProps } from '@reach/router'
+import { PageProps } from '../types'
 
-export interface SearchPageProps
-  extends RouteComponentProps {}
+export interface SearchPageProps extends PageProps {}

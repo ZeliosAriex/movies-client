@@ -1,5 +1,6 @@
 import styled from '@emotion/styled'
 import { ContentFrame } from '../ContentFrame'
+import { Avatar as AntAvatar } from 'antd'
 import { ReactComponent as LogoImage } from '../../../assets/images/tmdb-logo.svg'
 import { Link } from '@reach/router'
 
@@ -24,4 +25,9 @@ export const HeaderBody = styled.div`
   justify-content: flex-end;
   align-items: center;
   gap: 1.6rem;
+`
+
+export const Avatar = styled(AntAvatar)`
+  background-color: ${({ theme }) => theme.colors.primary};
+  cursor: pointer;
 `

@@ -1,14 +1,10 @@
-import {
-  AuthAction,
-  AuthActionSetter,
-  AuthState,
-} from './auth'
+import { AuthAction, AuthActions, AuthState } from './auth'
 import { Dispatch } from 'react'
 
 export interface AuthContextProps {
   state: AuthState
   dispatch: Dispatch<AuthAction>
-  actions: AuthActionSetter
+  actions: AuthActions
 }
 
 export interface GlobalStateContextProps {

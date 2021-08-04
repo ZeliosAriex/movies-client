@@ -7,6 +7,10 @@ declare module '@emotion/react' {
       white200: string
     }
 
+    colors: {
+      primary: string
+    }
+
     responsive: {
       mobileContentWidth: string
       tabletContentWidth: string

@@ -1,30 +1,35 @@
 import React from 'react'
-import { Avatar, Layout as AntLayout } from 'antd'
+import { Layout as AntLayout, Tooltip } from 'antd'
 import {
+  Avatar,
   HeaderBody,
   HeaderContainer,
   Logo,
   LogoLink,
 } from './styled'
+import { UserOutlined } from '@ant-design/icons'
 import { useIsAuthenticated } from '../../../contexts/Global/auth'
-import { useGlobalState } from '../../../contexts'
 
 const { Header: AntHeader } = AntLayout
 
 export const Header = () => {
   const isAuthenticated = useIsAuthenticated()
-  const {
-    auth: {
-      state: { session },
-    },
-  } = useGlobalState()
 
-  const authAvatar = isAuthenticated ? (
-    <Avatar
-      shape='circle'
-      size={40}
-      src={`https://avatars.dicebear.com/api/human/${session?.expiresAt}.svg`}
-    />
+  const userAvatar = isAuthenticated ? (
+    <Tooltip
+      title='You are connected as guest'
+      placement={'bottomRight'}
+      overlayInnerStyle={{
+        backgroundColor: '#FFF',
+        color: '#000',
+      }}>
+      <Avatar
+        shape='circle'
+        icon={<UserOutlined />}
+        size={40}>
+        Guest
+      </Avatar>
+    </Tooltip>
   ) : (
     'Not Authenticated'
   )
@@ -35,7 +40,7 @@ export const Header = () => {
         <LogoLink to='/'>
           <Logo />
         </LogoLink>
-        <HeaderBody>{authAvatar}</HeaderBody>
+        <HeaderBody>{userAvatar}</HeaderBody>
       </HeaderContainer>
     </AntHeader>
   )
